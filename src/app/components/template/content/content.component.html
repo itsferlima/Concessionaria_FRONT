@@ -1,0 +1,21 @@
+<mat-sidenav-container >
+    <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list >
+
+            <mat-list-item>
+                <mat-icon class="material-icons-outlined" mat-list-icon>home</mat-icon>
+                <a mat-list-item routerLink="">Home</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="material-icons-outlined" mat-list-icon>assignment</mat-icon>
+                <a mat-list-item routerLink="/carro/cadastrar">Cadastrar carro</a>
+            </mat-list-item>
+            
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    
+</mat-sidenav-container>

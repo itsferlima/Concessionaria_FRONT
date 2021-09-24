@@ -1,0 +1,12 @@
+a{
+    text-decoration: none ;
+    color:rgb(14, 8, 0);
+    padding: 10px;
+    font-size: 30px;
+    font-family: cursive;
+
+}
+
+mat-toolbar{
+    background-color: rgba(165, 159, 70, 0.555);
+}

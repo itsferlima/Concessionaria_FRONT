@@ -1,6 +1,29 @@
-<a routerLink="/carro/cadastrar">Cadastrar carro</a>
-<ol>
-    <li *ngFor="let carro of carros">
-        {{ carro.marca }}
-    </li>
-</ol>
+<a mat-raised-button color="warn" routerLink="/carro/cadastrar"></a>
+<mat-card-title> Cadastrados Carros </mat-card-title>
+    
+
+<div>
+<table mat-table [dataSource]="carros" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> # </th>
+        <td mat-cell *matCellDef="let carro"> {{carro._id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="marca">
+        <th mat-header-cell *matHeaderCellDef> Marca do carro:</th>
+        <td mat-cell *matCellDef="let carro"> {{carro.marca}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="valor">
+        <th mat-header-cell *matHeaderCellDef> Valor do carro: </th>
+        <td mat-cell *matCellDef="let carro"> {{carro.valor}} </td>
+    </ng-container>
+
+     
+    <tr mat-header-row *matHeaderRowDef="listColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: listColumns;"></tr>
+  </table>
+</div>
+
+<button mat-stroked-button routerLink="/carro/cadastrar" class="mat-elevation-z8"> Cadastrar novo carro </button>

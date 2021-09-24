@@ -1,10 +1,19 @@
-<div id="marca">
-    <label for="marca">Carro alugado:</label>
-    <input type="text" name="marca" [(ngModel)]="marca"/>
-</div>
-<div id="valor">
-    <label for="valor">Valor:</label>
-    <input type="text" name="valor" [(ngModel)]="valor"/>
-</div>
-<button (click)="cadastrar()">Cadastrar</button>
+<mat-card>
+    <mat-card-title> Cadastrar Carros </mat-card-title>
+    <mat-card-content>
 
+            <div class="marca"></div>
+                <mat-form-field>
+                    <mat-label for="data">Marca:</mat-label>
+                    <input matInput placeholder="" type="text" name="data" [(ngModel)]="marca" />
+                </mat-form-field>
+            <div class="valor"></div>   
+                <mat-form-field>
+                    <mat-label for="data">Valor:</mat-label>
+                    <input matInput placeholder="" type="text" name="data" [(ngModel)]="valor" />
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="cadastrar()">Cadastrar</button>
+            
+            <button mat-stroked-button routerLink="" > Listar os carros da concessionaria </button>         
+        </mat-card-content>
+    </mat-card>

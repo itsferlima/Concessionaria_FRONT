@@ -1,0 +1,28 @@
+mat-card-content{
+    padding: 20px;
+}
+
+mat-card-title{
+    font-size: 30px;
+}
+
+.marca{
+    flex: 1;
+    margin-left: 8px;
+    
+}
+
+.valor{
+    flex: 1;
+    margin-left: 8px;
+}
+
+button{
+  bottom: 10px;
+  width: 30%;
+  border: 3px solid #000;
+  background-color: orange;
+
+}
+
+

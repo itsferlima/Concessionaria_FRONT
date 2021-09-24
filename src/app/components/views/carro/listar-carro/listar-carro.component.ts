@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarroService } from 'src/app/services/carro.service';
 import { Carro } from 'src/app/models/carro';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-listar-carro',
@@ -8,14 +9,19 @@ import { Carro } from 'src/app/models/carro';
   styleUrls: ['./listar-carro.component.css']
 })
 export class ListarCarroComponent implements OnInit {
-  carros: Carro [] = [];
+  //carros: Carro [] = [];
+
+  carros!: MatTableDataSource<Carro>
+
+  listColumns: string[] = ['id', 'marca', 'valor'];
 
   constructor(private service: CarroService) { }
 
   ngOnInit(): void {
-    this.service.list().subscribe((carros) =>{
-      this.carros = carros;
-      console.log(carros);
-    });
+    this.service.list().subscribe((list) =>{
+      this.carros = new MatTableDataSource<Carro>(list)
+
+      //console.log(carros);
+    })
   }
 }
