@@ -1,0 +1,16 @@
+<mat-card>
+    <a mat-raised-button color="warn" routerLink="/carro/delete"></a>
+    <mat-card-title class="title"> Deletar Cadastro do carro</mat-card-title>
+    <mat-card-content>
+      
+      <mat-form-field >
+        <label for="data">Id do carro:</label>
+        <input label placeholder="" type="number" name="id" [(ngModel)]="id"/>
+      </mat-form-field>
+      <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="delete(id)">Deletar</button>
+        <button mat-raised-button routerLink="/">Voltar</button>
+      </mat-card-actions>
+      
+    </mat-card-content>
+  </mat-card>  

@@ -1,6 +1,6 @@
-<a mat-raised-button color="warn" routerLink="/carro/cadastrar"></a>
-<mat-card-title> Cadastrados Carros </mat-card-title>
-    
+<a mat-raised-button color="warn" routerLink="/carro/Listar"></a>
+<mat-card-title> Carros cadastrados</mat-card-title>
+
 
 <div>
 <table mat-table [dataSource]="carros" class="mat-elevation-z8">
@@ -20,10 +20,15 @@
         <td mat-cell *matCellDef="let carro"> {{carro.valor}} </td>
     </ng-container>
 
-     
+    <ng-container matColumnDef="buyId">
+        <th mat-header-cell *matHeaderCellDef> ID de compra: </th>
+        <td mat-cell *matCellDef="let carro"> {{carro.buyId}} </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="listColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: listColumns;"></tr>
   </table>
 </div>
-
+<button mat-stroked-button routerLink="/carro/editar" class="mat-elevation-z8">Editar</button>
+<button mat-stroked-button routerLink="/carro/delete" class="mat-elevation-z8">Delete</button>
 <button mat-stroked-button routerLink="/carro/cadastrar" class="mat-elevation-z8"> Cadastrar novo carro </button>

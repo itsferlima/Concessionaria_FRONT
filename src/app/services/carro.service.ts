@@ -17,4 +17,16 @@ export class CarroService {
   create(carro: Carro): Observable<Carro>{
     return this.http.post<Carro>(`${this.baseUrl}/create`, carro);
   }
+  getById(id: number): Observable<Carro> {
+    return this.http.get<Carro>(`${this.baseUrl}/getbyid/${id}`);
+  }
+  getByBuyId(buyId: number): Observable<Carro> {
+    return this.http.get<Carro>(`${this.baseUrl}/getbybuyid/${buyId}`);
+  }
+  update(carro: Carro): Observable<Carro>{
+    return this.http.put<Carro>(`${this.baseUrl}/update`, carro);
+  }
+  delete(id: number): Observable<Carro>{
+    return this.http.delete<Carro>(`${this.baseUrl}/delete/${id}`);
+  }
 }

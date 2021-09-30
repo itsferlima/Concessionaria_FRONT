@@ -13,15 +13,14 @@ export class ListarCarroComponent implements OnInit {
 
   carros!: MatTableDataSource<Carro>
 
-  listColumns: string[] = ['id', 'marca', 'valor'];
+  listColumns: string[] = ['id', 'marca', 'valor', 'id de compra'];
 
   constructor(private service: CarroService) { }
 
   ngOnInit(): void {
-    this.service.list().subscribe((list) =>{
+    this.service.list().subscribe((list) =>{ //list
       this.carros = new MatTableDataSource<Carro>(list)
-
-      //console.log(carros);
-    })
+      
+    });
   }
 }

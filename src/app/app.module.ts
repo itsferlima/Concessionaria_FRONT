@@ -2,13 +2,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CadastrarCarroComponent } from './components/views/carro/cadastrar-carro/cadastrar-carro.component';
 import { ListarCarroComponent } from './components/views/carro/listar-carro/listar-carro.component';
-import { FormsModule } from '@angular/forms';
-
-
+import { DeletarCarroComponent } from './components/views/carro/deletar-carro/deletar-carro.component';
+import { CadastrarUsuarioComponent } from './components/views/usuario/cadastrar-usuario/cadastrar-usuario.component';
+import { HomeComponent } from './components/views/home/home.component';
+import { EditarCarroComponent } from './components/views/carro/editar-carro/editar-carro.component';
 
 //material
 import {HeaderComponent} from './components/template/header/header.component';
@@ -28,6 +30,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +38,12 @@ import { MatSelectModule } from '@angular/material/select';
     ListarCarroComponent,
     HeaderComponent,
     ContentComponent,
+    DeletarCarroComponent,
+    HomeComponent,
+    EditarCarroComponent,
+    CadastrarUsuarioComponent,
+
+  
   ],
   imports: [
     BrowserModule,

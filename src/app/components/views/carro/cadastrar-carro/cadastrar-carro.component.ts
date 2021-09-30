@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Carro } from 'src/app/models/carro';
 import { CarroService } from 'src/app/services/carro.service';
 import { MatSnackBar } from "@angular/material/snack-bar";
@@ -9,17 +9,32 @@ import { MatSnackBar } from "@angular/material/snack-bar";
   styleUrls: ['./cadastrar-carro.component.css']
 })
 export class CadastrarCarroComponent implements OnInit {
+  id!: number;
   marca!: string;
   valor!: number;
+  buyId!: number;
 
-  constructor(private router: Router, private service: CarroService, private snack: MatSnackBar) { }
+  constructor(private router: Router, private route: ActivatedRoute, private service: CarroService, private snack: MatSnackBar) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      this.id = params.id;
+      if (this.id != undefined) {
+          this.service.getById(this.id).subscribe((carro) => {
+              this.marca = carro.marca;
+              this.valor = carro.valor;
+              this.buyId = carro.buyId;
+              
+          });
+      }
+  });
+  }
 
   cadastrar(): void {
     let carro: Carro = {
       marca: this.marca,
       valor: this.valor,
+      buyId: this.buyId,
     };
 
     this.service.create(carro).subscribe((carro ) =>{
@@ -33,4 +48,5 @@ export class CadastrarCarroComponent implements OnInit {
       this.router.navigate(["carro/listar"]);
     });
   }
+
 }

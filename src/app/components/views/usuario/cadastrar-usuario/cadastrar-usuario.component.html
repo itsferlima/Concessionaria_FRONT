@@ -1,0 +1,17 @@
+<mat-card>
+    <a mat-raised-button color="warn" routerLink="/usuario/cadastrar"></a>
+    <mat-card-title class="title"> Cadastrar usuario comprador</mat-card-title>
+    <mat-card-content>
+        <div id="nome">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" [(ngModel)]="nome" />
+    </div>
+    <div id="email">
+        <label for="email">Email:</label>
+        <input type="text" name="email" [(ngModel)]="email" />
+    </div>
+<button mat-raised-button (click)="cadastrar()">Cadastrar</button>
+<button mat-raised-button routerLink="/">Voltar</button>
+    </mat-card-content>
+
+</mat-card>
