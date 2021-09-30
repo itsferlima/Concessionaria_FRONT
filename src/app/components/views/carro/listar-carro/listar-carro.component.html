@@ -1,34 +1,49 @@
-<a mat-raised-button color="warn" routerLink="/carro/Listar"></a>
+<h1>Carros cadastrados</h1>
+
+<table>
+    <tr>
+        <th> Id</th>
+        <th> Marca</th>
+        <th> Valor</th>
+        <th> ID de compra</th>
+    </tr>
+    <tr *ngFor="let carro of carros">
+
+        <td>{{ carro.id }}</td>
+        <td>{{ carro.marca }}</td>
+        <td>{{ carro.valor }}</td>
+        <td>{{ carro.buyId }}</td>
+
+</table>
+
+<button mat-stroked-button routerLink="/carro/update" class="mat-elevation-z8">Editar</button>
+<button mat-stroked-button routerLink="/carro/delete" class="mat-elevation-z8">Delete</button>
+<button mat-stroked-button routerLink="/carro/cadastrar" class="mat-elevation-z8"> Cadastrar novo carro </button>
+
+
+
+<!-- <a mat-raised-button color="warn" routerLink="/carro/listar"></a>
 <mat-card-title> Carros cadastrados</mat-card-title>
 
-
 <div>
-<table mat-table [dataSource]="carros" class="mat-elevation-z8">
-  
+    <table mat-table [dataSource]="carros" class="mat-elevation-z8">
+
     <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> # </th>
         <td mat-cell *matCellDef="let carro"> {{carro._id}} </td>
     </ng-container>
-
+    
     <ng-container matColumnDef="marca">
-        <th mat-header-cell *matHeaderCellDef> Marca do carro:</th>
+        <th mat-header-cell *matHeaderCellDef> Marca: </th>
         <td mat-cell *matCellDef="let carro"> {{carro.marca}} </td>
     </ng-container>
-
+    
     <ng-container matColumnDef="valor">
-        <th mat-header-cell *matHeaderCellDef> Valor do carro: </th>
+        <th mat-header-cell *matHeaderCellDef> Valor</th>
         <td mat-cell *matCellDef="let carro"> {{carro.valor}} </td>
     </ng-container>
-
-    <ng-container matColumnDef="buyId">
-        <th mat-header-cell *matHeaderCellDef> ID de compra: </th>
-        <td mat-cell *matCellDef="let carro"> {{carro.buyId}} </td>
-    </ng-container>
-
+     
     <tr mat-header-row *matHeaderRowDef="listColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: listColumns;"></tr>
-  </table>
-</div>
-<button mat-stroked-button routerLink="/carro/editar" class="mat-elevation-z8">Editar</button>
-<button mat-stroked-button routerLink="/carro/delete" class="mat-elevation-z8">Delete</button>
-<button mat-stroked-button routerLink="/carro/cadastrar" class="mat-elevation-z8"> Cadastrar novo carro </button>
+</table>  
+</div> -->

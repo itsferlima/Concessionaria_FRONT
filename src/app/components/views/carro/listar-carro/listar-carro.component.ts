@@ -9,18 +9,19 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./listar-carro.component.css']
 })
 export class ListarCarroComponent implements OnInit {
-  //carros: Carro [] = [];
+  carros: Carro [] = [];
 
-  carros!: MatTableDataSource<Carro>
+  //carros!: MatTableDataSource<Carro>
 
-  listColumns: string[] = ['id', 'marca', 'valor', 'id de compra'];
+  //listColumns: string[] = ['id', 'marca', 'valor', 'id de compra'];
 
   constructor(private service: CarroService) { }
 
   ngOnInit(): void {
-    this.service.list().subscribe((list) =>{ //list
-      this.carros = new MatTableDataSource<Carro>(list)
-      
+    this.service.list().subscribe((carros) =>{ //list
+      //this.carros = new MatTableDataSource<Carro>(list)
+      this.carros = carros;
+      console.log(carros);
     });
   }
 }

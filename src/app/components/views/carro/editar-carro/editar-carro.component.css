@@ -1,5 +1,16 @@
+
+div{
+    padding: 10px;
+}
 .title{
     font-size: 50px;
     font-style: italic;
     background-color: red;
 }
+button{
+    left: 56px;
+    width: 30%;
+    border: 3px solid #000;
+    background-color: rgb(207, 164, 23);
+  
+} 

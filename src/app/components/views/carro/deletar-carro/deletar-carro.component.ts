@@ -15,18 +15,8 @@ export class DeletarCarroComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  delete (id: number): void{
-    console.log(this.delete);
-    this.service.delete(id).subscribe((Carro) => {
-      console.log(id);
-      this.snack.open("Deletado", "",{
-        duration: 3000,
-        horizontalPosition: "right",
-        verticalPosition: "top",
-      });
-      this.router.navigate(["carro/deletar"]);
-      this.ngOnInit
-    })
+  delete(id: any ) {
+    this.service.delete(id).subscribe((id) => {});
+    this.router.navigate([""]);
   }
-
 }
