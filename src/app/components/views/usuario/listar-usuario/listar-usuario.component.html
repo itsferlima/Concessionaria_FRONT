@@ -1,0 +1,21 @@
+<h1>Compradores cadastrados</h1>
+
+<table>
+    <tr>
+        <th> Id</th>
+        <th> Nome</th>
+        <th> E-mail</th>
+    </tr>
+    <tr *ngFor="let usuario of usuarios">
+
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.nome }}</td>
+        <td>{{ usuario.email }}</td>
+      
+
+</table>
+
+<button mat-stroked-button routerLink="/usuario/update" class="mat-elevation-z8">Editar</button>
+<button mat-stroked-button routerLink="/usuario/delete" class="mat-elevation-z8">Delete</button>
+<button mat-stroked-button routerLink="/usuario/cadastrar" class="mat-elevation-z8"> Cadastrar novo comprador </button>
+

@@ -28,11 +28,11 @@ export class EditarCarroComponent implements OnInit {
     };
     
     this.service.update(carro).subscribe((carro) => {
-      this.snack.open("Carro editado", "Carro",{
-        duration: 3000,
-        horizontalPosition: "left",
-        verticalPosition: "top",
-        })
+      // this.snack.open("Carro editado", "Carro",{
+      //   duration: 3000,
+      //   horizontalPosition: "left",
+      //   verticalPosition: "top",
+      //   })
         console.log(carro);
         this.router.navigate(["carro/editar"]);
     });

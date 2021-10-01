@@ -7,6 +7,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListarCarroComponent } from './components/views/carro/listar-carro/listar-carro.component';
 import { CadastrarUsuarioComponent } from './components/views/usuario/cadastrar-usuario/cadastrar-usuario.component';
+import { EditarUsuarioComponent } from './components/views/usuario/editar-usuario/editar-usuario.component';
+import { ListarUsuarioComponent } from './components/views/usuario/listar-usuario/listar-usuario.component';
+import { DeletarUsuarioComponent } from './components/views/usuario/deletar-usuario/deletar-usuario.component';
 
 const routes: Routes = [
   {
@@ -32,7 +35,20 @@ const routes: Routes = [
   {
     path:"usuario/cadastrar",
     component: CadastrarUsuarioComponent,
+  },
+  {
+    path:"usuario/update",
+    component: EditarUsuarioComponent,
+  },
+  {
+    path:"usuario/listar",
+    component: ListarUsuarioComponent,
+  },
+  {
+    path:"usuario/delete",
+    component: DeletarUsuarioComponent,
   }
+
 ];
 
 @NgModule({

@@ -1,0 +1,22 @@
+<h1> Editar usuario:</h1>
+<mat-card-content>
+
+<div id="id">
+    <label for="id">ID:  </label>
+    <input label placeholder type="number" name="id" [(ngModel)] = "id"/>
+</div>
+
+<div id="nome">
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" [(ngModel)] = "nome"/>
+</div>
+
+<div id="email">
+    <label for="email">E-mail:</label>
+    <input type="text" name="email" [(ngModel)] = "email"/>
+</div>
+
+
+</mat-card-content>
+<button mat-raised-button (click)="update()">Editar</button>
+<button class="blista" mat-raised-button routerLink= "/usuario/listar" > Listar os usuarios </button>   
