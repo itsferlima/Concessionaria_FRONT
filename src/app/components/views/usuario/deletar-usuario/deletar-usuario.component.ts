@@ -8,15 +8,16 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./deletar-usuario.component.css']
 })
 export class DeletarUsuarioComponent implements OnInit {
-  id!: number;
+  nome!: string;
   
   constructor(private router: Router, private service: UsuarioService) { }
 
   ngOnInit(): void {}
 
-  delete(id: any ) {
-    this.service.delete(id).subscribe((id) => {});
-    this.router.navigate([""]);
+  delete(nome: string ): void {
+    console.log(this.delete);
+    this.service.delete(nome).subscribe((nome) => {});
+    this.router.navigate(["usuario/listar"]);
   }
 
 }

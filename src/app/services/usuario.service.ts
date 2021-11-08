@@ -23,10 +23,13 @@ export class UsuarioService {
     return this.http.put<Usuario>(`${this.baseUrl}/update`, usuario);
   }
     
-  delete(usuario: Usuario): Observable<Usuario> {
-    return this.http.delete<Usuario>(`${this.baseUrl}/update/${usuario.nome}`);
+  // delete(usuario: Usuario): Observable<Usuario> {
+  //   return this.http.delete<Usuario>(`${this.baseUrl}/update/${usuario.id}`);
+  // }
+  delete(nome:string): Observable<Usuario>{
+    return this.http.delete<Usuario>(`${this.baseUrl}/delete/${nome}`);
   }
-  find(id: Number): Observable<Usuario> {
+  find(id: number): Observable<Usuario> {
     return this.http.get<Usuario>(`${this.baseUrl}/getbyid/${id}`);
   }
 

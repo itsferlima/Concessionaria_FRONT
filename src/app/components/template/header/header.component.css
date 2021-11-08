@@ -1,3 +1,10 @@
 mat-toolbar{
-    background-color: rgb(203, 209, 148);
+    background-color: rgb(241, 207, 55);
+}
+.img{
+  width: 35%;
+  border-color: black;
+}
+mat-icon{
+  width: 10%;
 }

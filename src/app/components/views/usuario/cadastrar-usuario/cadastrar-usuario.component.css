@@ -6,13 +6,11 @@ mat-card-content{
     font-size: 30px;
     font-weight: bold;
     color: #000000;
-    width: 300px;
 }
 
 button{
     left: 60px;
     width: 30%;
     border: 3px solid #000;
-    background-color: rgb(207, 164, 23);
-  
+    background-color: rgb(207, 164, 23); 
 }

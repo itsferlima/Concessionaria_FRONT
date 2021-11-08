@@ -5,14 +5,17 @@
         <th> Id</th>
         <th> Marca</th>
         <th> Valor</th>
-        <th> ID de compra</th>
+        <th> ID de comprador</th>
+        <th> Nome do comprador</th>
     </tr>
     <tr *ngFor="let carro of carros">
 
         <td>{{ carro.id }}</td>
         <td>{{ carro.marca }}</td>
         <td>{{ carro.valor }}</td>
-        <td>{{ carro.buyId }}</td>
+        <td>{{ carro.userId }}</td>
+        <td>{{ carro.usuario!.nome}}</td>
+
 
 </table>
 

@@ -1,14 +1,14 @@
-<mat-card>
+ <mat-card>
     <a mat-raised-button color="warn" routerLink="/usuario/delete"></a>
     <mat-card-title class="title"> Deletar comprador do carro</mat-card-title>
     <mat-card-content>
       
       <mat-form-field >
-        <label for="data">Id do comprador:</label>
-        <input label placeholder="" type="number" name="id" [(ngModel)]="id"/>
+        <label for="data">Nome do comprador:</label>
+        <input type="text" name="nome" [(ngModel)]="nome"/>
       </mat-form-field>
       <mat-card-actions>
-        <button mat-raised-button color="accent" (click)="delete(id)">Deletar</button>
+        <button mat-raised-button (click)="delete(nome)">Deletar</button>
         <button mat-raised-button routerLink="/usuario/cadastrar">Voltar</button>
         <button class="blista" mat-raised-button routerLink= "/usuario/listar" > Listar os compradores </button>   
       </mat-card-actions>

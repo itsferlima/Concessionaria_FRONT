@@ -13,13 +13,38 @@
                 <mat-form-field>
                     <label for="data">Valor:</label>
                     <input type="number" name="data" [(ngModel)]="valor" />
-                </mat-form-field>
+                </mat-form-field> 
 
-            <div class="compra"></div>   
+            <!-- <div class="compra"></div>   
                 <mat-form-field>
                     <label for="data">ID de Compra:</label>
-                    <input type="number" name="data" [(ngModel)]="buyId" />
+                    <input type="number" name="data" [(ngModel)]="userId" />
+                </mat-form-field> -->
+
+            <div class="usuario"></div>   
+                <mat-form-field>
+                    <label for="usuario">ID do comprador:</label>
+                    <input type="text" name="usuario" [(ngModel)]="userId">
+                    <mat-option
+                            *ngFor="let usuario of usuarios"
+                            value="{{ usuario.id }}"
+                        >
+                            {{ usuario.nome }}
+                        </mat-option>
                 </mat-form-field>
+
+
+                <!-- <mat-form-field id="usuario">
+                    <label for="usuario">Usuario:</label>
+                    <mat-select name="usuario" [(ngModel)]="usuarios">
+                        <mat-option
+                            *ngFor="let usuario of usuarios"
+                            value="{{ usuario.id }}"
+                        >
+                            {{ usuario.nome }}
+                        </mat-option>
+                    </mat-select>>
+                </mat-form-field> -->
 
             <button mat-raised-button (click)="cadastrar()">Cadastrar</button>
             <button mat-raised-button routerLink="/">Voltar</button>

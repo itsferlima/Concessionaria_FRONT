@@ -13,7 +13,7 @@ export class EditarCarroComponent implements OnInit {
   id!:number;
   marca!: string;
   valor!: number;
-  buyId!: number;
+  userId!: number;
 
   constructor(private router: Router, private route: ActivatedRoute, private service: CarroService, private snack: MatSnackBar) { }
 
@@ -24,7 +24,7 @@ export class EditarCarroComponent implements OnInit {
         id!: this.id,
         marca: this.marca,
         valor: this.valor,
-        buyId: this.buyId,
+        userId: this.userId,
     };
     
     this.service.update(carro).subscribe((carro) => {

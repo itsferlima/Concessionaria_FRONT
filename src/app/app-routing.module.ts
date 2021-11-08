@@ -1,5 +1,5 @@
 import { EditarCarroComponent } from './components/views/carro/editar-carro/editar-carro.component';
-import { HomeComponent } from './components/views/home/home.component';
+import { HomeComponent } from './components/template/home/home.component';
 
 import { DeletarCarroComponent } from './components/views/carro/deletar-carro/deletar-carro.component';
 import { CadastrarCarroComponent } from './components/views/carro/cadastrar-carro/cadastrar-carro.component';

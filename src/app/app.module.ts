@@ -9,7 +9,7 @@ import { CadastrarCarroComponent } from './components/views/carro/cadastrar-carr
 import { ListarCarroComponent } from './components/views/carro/listar-carro/listar-carro.component';
 import { DeletarCarroComponent } from './components/views/carro/deletar-carro/deletar-carro.component';
 import { CadastrarUsuarioComponent } from './components/views/usuario/cadastrar-usuario/cadastrar-usuario.component';
-import { HomeComponent } from './components/views/home/home.component';
+import { HomeComponent } from './components/template/home/home.component';
 import { EditarCarroComponent } from './components/views/carro/editar-carro/editar-carro.component';
 
 //material
