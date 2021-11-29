@@ -1,11 +1,20 @@
-<mat-sidenav-container >
-    <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64">
-        <mat-nav-list >
+<mat-toolbar class="mat-elevation-z4">
+    <button (click)="sidenav.toggle()" mat-icon-button>
+    <mat-icon>home</mat-icon>
+    </button>
+    <a class="title" mat-button routerLink="">Home</a>
+</mat-toolbar>
+                        
 
-            <mat-list-item>
+<mat-sidenav-container class="container">
+    <mat-sidenav #sidenav mode="side" class="sidenav">
+    
+    
+        <mat-nav-list>         
+            <!-- <mat-list-item>
                 <mat-icon class="material-icons-outlined" mat-list-icon>home</mat-icon>
                 <a mat-list-item routerLink="/">Home</a>
-            </mat-list-item>
+            </mat-list-item> -->
 
             <mat-list-item>
                 <mat-icon class="material-icons-outlined" mat-list-icon>account_circle</mat-icon>

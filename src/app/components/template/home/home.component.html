@@ -7,6 +7,33 @@
         Aqui você encontra o carro que sempre desejou
         <mat-icon> directions_car</mat-icon>
     </span>
-    
-    <!-- <img alt scr="assets/carros.jpg"> -->
 </div>
+
+<mat-grid-list cols="6" rowHeight="350px" [gutterSize]="'16px'">
+    <mat-grid-tile *ngFor="let carro of carros">
+        <mat-card>
+            <img mat-card-image src="../../../../assets/carnew.jpg" alt="imagem do carro comprado"/>
+            <mat-card-content>
+                <mat-card-title>
+                    {{ carro.marca }}
+                </mat-card-title>
+                <mat-card-subtitle>
+                    {{ carro.valor | currency: "BRL" }}
+                </mat-card-subtitle>
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button
+                    (click)="adicionar(carro)"
+                    mat-stroked-button
+                    color="warn"
+                    mat-button
+                >
+                    Adicionar
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+
+ 

@@ -10,11 +10,16 @@ import { CadastrarUsuarioComponent } from './components/views/usuario/cadastrar-
 import { EditarUsuarioComponent } from './components/views/usuario/editar-usuario/editar-usuario.component';
 import { ListarUsuarioComponent } from './components/views/usuario/listar-usuario/listar-usuario.component';
 import { DeletarUsuarioComponent } from './components/views/usuario/deletar-usuario/deletar-usuario.component';
+import { CarrinhoComponent } from './components/template/home/carrinho/carrinho.component';
 
 const routes: Routes = [
   {
     path: "",
     component: HomeComponent,
+  },
+  {
+    path: "home/carrinho",
+    component: CarrinhoComponent,
   },
   {
     path:"carro/listar",

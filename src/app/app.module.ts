@@ -28,9 +28,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
+
 import { EditarUsuarioComponent } from './components/views/usuario/editar-usuario/editar-usuario.component';
 import { ListarUsuarioComponent } from './components/views/usuario/listar-usuario/listar-usuario.component';
 import { DeletarUsuarioComponent } from './components/views/usuario/deletar-usuario/deletar-usuario.component';
+import { CarrinhoComponent } from './components/template/home/carrinho/carrinho.component';
+
 
 
 
@@ -48,6 +51,8 @@ import { DeletarUsuarioComponent } from './components/views/usuario/deletar-usua
     EditarUsuarioComponent,
     ListarUsuarioComponent,
     DeletarUsuarioComponent,
+    CarrinhoComponent,
+ 
 
   
   ],
